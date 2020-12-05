@@ -58,7 +58,7 @@ n = 12:<br/>
 
 
 n = 50:<br/>
-<img src="50Permutation0.3nlogn.png" height="50%" width="50%">
+<img src="50Permutation0.3nlogn.png">
 
 | Test                        | p value      |
 | --------------------------- | ------------ |
