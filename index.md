@@ -23,7 +23,25 @@ The obvious question here is, how many times do we need to repeat the process? I
 ###   Spearman's rank correlation
 ###   Hamming distance
 ###   Kendall's tau
+Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to the identity permutation, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
+
+What does this look like concretely? Note that in a set of n elements, there are <img src="https://render.githubusercontent.com/render/math?math={n \choose 2}"> pairs of elements, so in our example, where n = 6, there are <img src="https://render.githubusercontent.com/render/math?math={6 \choose 2}"> = 15 pairs. How many of these are inversions? 
+
+Let's look at the pair (1, 2). The first entry in σ is 4 and the second entry is 1. 4 > 1, so this is an inversion.
+Now let's consider (1, 3). The first entry is 4 and the third entry is 2. 4 > 2, so this is also an inversion.
+How about (1, 4)? The first entry is 4 and the fourth entry is 5. 4 is not greater than 5, so this is not an inversion.
+
+Continue this process for all 15 pairs and we will find that there are 4 inversions: (1, 2), (1, 3), (1, 5), and (4, 5). 
+
+The number of inversions is also equal to the minimum number of pairwise adjacent transpositions required to bring <img src="https://render.githubusercontent.com/render/math?math=\pi^{-1}"> to <img src="https://render.githubusercontent.com/render/math?math=\sigma^{-1}">. This statistic is known as I(π, σ), or Kendall's tau.
+
+Kendall's tau has these properties:
+
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{n \choose 2}{2}">
+
+Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{n(n-1)(2n %2B 5)}{72}">
+
+<img src="https://render.githubusercontent.com/render/math?math=\dfrac{I - Mean}{SD}"> has a standard normal limiting distribution, so we can calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.187.
 
 ## Examples
 ###   Running for 0.3nlog(n) steps
