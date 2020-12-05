@@ -51,7 +51,7 @@ We are therefore able to calculate a p value for our test statistic. In our exam
 ###   Running for 0.3nlog(n) steps
 
 n = 12:
-<img src="https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/12Permutation0.3nlogn.png">
+<img src="12Permutation0.3nlogn.png">
 
 | Test                        | p value      |
 | --------------------------- | ------------ |      
@@ -63,7 +63,7 @@ n = 12:
 
 n = 50:
 
-<img src="https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/50Permutation0.3nlogn.png">
+<img src="50Permutation0.3nlogn.png">
 
 | Test                        | p value      |
 | --------------------------- | ------------ |
