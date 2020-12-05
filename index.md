@@ -28,8 +28,10 @@ Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ
 What does this look like concretely? Note that in a set of n elements, there are <img src="https://render.githubusercontent.com/render/math?math={n \choose 2}"> pairs of elements, so in our example, where n = 6, there are <img src="https://render.githubusercontent.com/render/math?math={6 \choose 2}"> = 15 pairs. How many of these are inversions? 
 
 Let's look at the pair (1, 2). The first entry in σ is 4 and the second entry is 1. 4 > 1, so this is an inversion.
+
 Now let's consider (1, 3). The first entry is 4 and the third entry is 2. 4 > 2, so this is also an inversion.
-How about (1, 4)? The first entry is 4 and the fourth entry is 5. 4 is not greater than 5, so this is not an inversion.
+
+How about (1, 4)? The first entry is 4 and the fourth entry is 5. 4 < 5, so this is not an inversion.
 
 Continue this process for all 15 pairs and we will find that there are 4 inversions: (1, 2), (1, 3), (1, 5), and (4, 5). 
 
