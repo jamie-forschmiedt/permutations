@@ -49,5 +49,28 @@ We are therefore able to calculate a p value for our test statistic. In our exam
 
 ## Examples
 ###   Running for 0.3nlog(n) steps
+
+n = 12:
+<img src="https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/12Permutation0.3nlogn.png">
+
+| Test                        | p value      |
+| --------------------------- | ------------ |      
+| Footrule                    | 0.0103574528 |
+| Spearman's rank correlation | 0.0861079997 |
+| Hamming distance            | 0.0005941848 |
+| Kendall's tau               | 0.0548539399 |
+
+
+n = 50:
+
+<img src="">
+
+| Test                        | p value       |
+| --------------------------- | ------------- |
+| Footrule                    |             
+| Spearman's rank correlation |
+| Hamming distance            |
+| Kendall's tau               |
+
 ###   Running for 0.7nlog(n) steps
 
