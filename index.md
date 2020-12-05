@@ -1,5 +1,5 @@
 ## What is a permutation?
-A permutation is an ordered arrangement of the elements in a set. For instance, consider the set of the numbers 1 through 3. There are six possible permutations of this set: (1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,1,2), and (3,2,1). On the set of numbers {1, ..., n}, there are n! permutations.
+A permutation is an ordered arrangement of the elements in a set. For instance, consider the set of the numbers 1 through 3. There are six possible permutations of this set: 123, 132, 213, 231, 312, and 321. On the set of numbers 1 through n, there are n! permutations.
 
 ## Generating a random permutation
 Let's say we wanted to write a program that would simulate shuffling a standard deck of 52 cards. Well, this seems simple enough: number each card, and then generate a random permutation of the set of numbers from 1 to 52. The position of each number in our permutation then becomes the position of the corresponding card in our shuffled deck. 
