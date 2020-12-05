@@ -7,9 +7,13 @@ Let's say we wanted to write a program that would simulate shuffling a standard 
 But how do we actually generate the permutation? 52 isn't a very large number, but the number of possible permutations - 52 factorial - is huge. Using a "brute force" method of listing all possible permutations and then picking one at random can be very computationally expensive. Here's one approach that's easier for your computer to handle:
 
 1) Begin with all the numbers {1,...,52} listed in ascending order.
+
 2) Pick two indices (between 1 and 52) uniformly at random.
+
 3) If the same index is picked twice, do nothing.
+
 4) If two different indices are picked, swap the numbers at those indices.
+
 5) Repeat steps 2-4 for some number of iterations.
 
 The obvious question here is, how many times do we need to repeat the process? If we just do one or two swaps, we'll end up with a permutation very close to our starting state - the order of the cards will barely change at all. It turns out that for a set of n elements, it takes about 0.6nlog(n) steps for this process to converge to a random permutation. So for our deck of cards, we'll want to run the program for around 0.6 * 52log(52) = 123 steps. 
