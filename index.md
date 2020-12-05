@@ -4,7 +4,7 @@ A permutation is an ordered arrangement of the elements in a set. For instance, 
 ## Generating a random permutation
 Let's say we wanted to write a program that would simulate shuffling a standard deck of 52 cards. Well, this seems simple enough: number each card, and then generate a random permutation of the set of numbers from 1 to 52. The position of each number in our permutation then becomes the position of the corresponding card in our shuffled deck. 
 
-But how do we actually generate the permutation? 52 isn't a very large number, but the number of possible permutations - 52 factorial - is huge. Using a "brute force" method of listing all possible permutations and then picking one at random is very computationally expensive. Here's one approach that's easier for the computer to handle:
+But how do we actually generate the permutation? 52 isn't a very large number, but the number of possible permutations - 52! - is huge. Using a "brute force" method of listing all possible permutations and then picking one at random is very computationally expensive. Here's one approach that's easier for the computer to handle:
 
 1) Begin with all the numbers {1, 2, ..., 52} listed in ascending order.
 
@@ -23,6 +23,7 @@ The obvious question here is, how many times do we need to repeat the process? I
 ###   Spearman's rank correlation
 ###   Hamming distance
 ###   Kendall's tau
+Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{n \choose 2}{2}">
 
 ## Examples
 ###   Running for 0.3nlog(n) steps
