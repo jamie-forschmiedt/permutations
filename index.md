@@ -63,14 +63,14 @@ n = 12:
 
 n = 50:
 
-<img src="">
+<img src="https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/50Permutation0.3nlogn.png">
 
-| Test                        | p value       |
-| --------------------------- | ------------- |
-| Footrule                    |             
-| Spearman's rank correlation |
-| Hamming distance            |
-| Kendall's tau               |
+| Test                        | p value      |
+| --------------------------- | ------------ |
+| Footrule                    | 0.0510076617 |
+| Spearman's rank correlation | 0.1775827162 |
+| Hamming distance            | 0.0005941848 |
+| Kendall's tau               | 0.1300158834 |
 
 ###   Running for 0.7nlog(n) steps
 
