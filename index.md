@@ -22,9 +22,9 @@ Footruld has these properties:
 
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{3}(n^2 - 1)">
 
-Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{45}(n + 1)(2n^2 + 7)">
+Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{45}(n \p 1)(2n^2 \p 7)">
 
-<img src="https://render.githubusercontent.com/render/math?math=\dfrac{S - Mean}{SD}"> has a standard normal limiting distribution.
+<img src="https://render.githubusercontent.com/render/math?math=\dfrac{\rho - Mean}{SD}"> has a standard normal limiting distribution.
 
 ###   Spearman's rank correlation
 Using the same π and σ, The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
