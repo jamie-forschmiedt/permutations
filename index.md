@@ -26,7 +26,7 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{\rho - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, ρ = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.2955795.
+We are therefore able to calculate a p value for our test statistic. In our example, ρ = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.29558.
 
 ###   Spearman's rank correlation
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
@@ -38,6 +38,9 @@ Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{(n
 Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{36}n^2(n - 1)(n %2B 1)^2">
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{S^2 - Mean}{SD}"> has a standard normal limiting distribution.
+
+We are therefore able to calculate a p value for our test statistic. In our example, ρ = 9 + 1 + 1 + 1 + 4 + 0 = 16, mean = 210/6 = 35, variance = 36(5)(49)/36 = 245, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 15.652. Our standardized variable is therefore -1.214. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.22479.
+
 ###   Hamming distance
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the total number of fixed point in σ, where π(i) = σ(i) and 1 ≤ i ≤ n. 
 ###   Kendall's tau
@@ -63,7 +66,7 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{I - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.1884860.
+We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.18684.
 
 ## Examples
 ###   Running for 0.3nlog(n) steps
