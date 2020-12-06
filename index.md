@@ -33,7 +33,7 @@ Spearman's rank has these properties:
 
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{(n^3 - n)}{6}">
 
-Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{36}(n %2B 1)^2">
+Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{36}n^2(n - 1)(n %2B 1)^2">
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{S^2 - Mean}{SD}"> has a standard normal limiting distribution.
 ###   Hamming distance
