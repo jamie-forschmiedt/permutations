@@ -18,8 +18,9 @@ The obvious question here is, how many times do we need to repeat the process? I
 ###   Footrule
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
 ###   Spearman's rank correlation
-Using the same π and σ, 
+Using the same π and σ, The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
 ###   Hamming distance
+Using the same π and σ, The third test statistic we will compute is the total number of fixed point in σ, where π(i) = σ(i) and 1 ≤ i ≤ n. 
 ###   Kendall's tau
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to the identity permutation, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
 
