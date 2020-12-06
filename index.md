@@ -15,10 +15,10 @@ But how do we actually generate the permutation? 52 isn't a very large number, b
 The obvious question here is, how many times do we need to repeat the process? If we just do one or two swaps, we'll end up with a permutation very close to our starting state - the order of the cards will barely change at all. It turns out that for a set of n elements, it takes about 0.6nlog(n) steps for this process to converge to a random permutation. So for our deck of cards, we'll want to run the program for around 0.6 * 52log(52) = 123 steps. 
 
 ## Is it really random?
-###   Footrule
+###   Spearman's Footrule
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
 
-Footruld has these properties:
+Spearman's Footrule has these properties:
 
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{3}(n^2 - 1)">
 
@@ -28,6 +28,14 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 ###   Spearman's rank correlation
 Using the same π and σ, The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
+
+Spearman's rank has these properties:
+
+Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{(n^3 - n)}{6}">
+
+Variance = <img src="https://render.githubusercontent.com/render/math?math= \dfrac{n^2(n - 1)(n %2B 1)^2}{36}">
+
+<img src="https://render.githubusercontent.com/render/math?math=\dfrac{S^2 - Mean}{SD}"> has a standard normal limiting distribution.
 ###   Hamming distance
 Using the same π and σ, The third test statistic we will compute is the total number of fixed point in σ, where π(i) = σ(i) and 1 ≤ i ≤ n. 
 ###   Kendall's tau
