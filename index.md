@@ -109,7 +109,7 @@ Here is a table of the p values from our statistical tests:
 
 Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
 
-<img src="50Permutation0.3nlogn_2.png" width="50%">
+<img src="50Permutation0.3nlogn_2.png" width="75%">
 
 Note the p values from our statistical tests: 
 
@@ -139,7 +139,7 @@ Note how much larger the p values are:
 
 And here is an example where n = 50:
 
-<img src="50Permutation0.7nlogn_2.png" width="50%">
+<img src="50Permutation0.7nlogn_2.png" width="75%">
 
 Again, note the larger p values:
 
