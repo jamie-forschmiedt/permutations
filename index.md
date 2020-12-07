@@ -22,7 +22,7 @@ Each of the 4 tests below will produce a corresponding p-value. Setting a cut-of
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
 ###   Spearman's Footrule
-Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Footrule. Let ρ(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
+Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Spearman's footrule. Let D(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
 
 Footrule has these properties:
 
@@ -30,9 +30,9 @@ Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}
 
 Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{45}(n %2B 1)(2n^2 %2B 7)">
 
-<img src="https://render.githubusercontent.com/render/math?math=\dfrac{\rho - Mean}{SD}"> has a standard normal limiting distribution.
+<img src="https://render.githubusercontent.com/render/math?math=\dfrac{D - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p-value for our test statistic. In our example, ρ = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.29558.
+We are therefore able to calculate a p-value for our test statistic. In our example, D = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.29558.
 
 ###   Spearman's rank correlation
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), which is called the Spearman's rank correlation. Let <img src="https://render.githubusercontent.com/render/math?math=S^2(\pi, \sigma)"> =Σ<img src="https://render.githubusercontent.com/render/math?math=(\pi(i) - \sigma(i))^2">, where 1 ≤ i ≤ n. 
