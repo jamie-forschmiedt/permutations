@@ -50,7 +50,11 @@ We are therefore able to calculate a p value for our test statistic. In our exam
 ###   Hamming distance
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
 
-The total number of fixed point in σ, where π(i) = σ(i), has a limiting Poisson(1) distribution.
+n - H, the total number of fixed point in σ where π(i) = σ(i), has a limiting Poisson(1) distribution. 
+
+We are therefore able to calculate a p value for our test statistic. In our example, H = 5, n - H = 1, λ = 1.
+
+Hence, we can calculate that the upper-tailed p-value, whic is P(n - H ≥ 1) = 1 - P(n - H < 1) = 1 - P(n - H = 0) = 1 - <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1^1e^{-1}}{0!}">. = 1 - 0.3678794 = 0.6321206
 
 ###   Kendall's tau
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to π, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
@@ -75,7 +79,7 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{I - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.187.
+We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.187.
 
 ## Visualizing permutations
 Below are a few visualizations of permutations generated using the process described in our card-shuffling example.
