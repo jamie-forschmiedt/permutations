@@ -17,7 +17,7 @@ The obvious question here is, how many times do we need to repeat the process? I
 ## Is it really random?
 Our null hypothesis here is that the generated permutation is uniformly distributed.
 
-Each of the 4 tests below will produce a corredponding p-value. Setting a cut-off for the p-value is tricky and controversial, so we can only make subjective decisions regarding when to reject the null hypothesis. However, we might not want to see about p-values less than 0.05.
+Each of the 4 tests below will produce a corresponding p-value. Setting a cut-off for the p-value is tricky and controversial, so we can only make subjective decisions regarding when to reject the null hypothesis. However, we might not want to see p-values less than around 0.05.
 
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
@@ -53,7 +53,7 @@ Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test stati
 The total number of fixed point in σ, where π(i) = σ(i), has a limiting Poisson(1) distribution.
 
 ###   Kendall's tau
-Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to the identity permutation, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
+Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to π, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
 
 What does this look like concretely? Note that in a set of n elements, there are <img src="https://render.githubusercontent.com/render/math?math={n \choose 2}"> pairs of elements, so in our example, where n = 6, there are <img src="https://render.githubusercontent.com/render/math?math={6 \choose 2}"> = 15 pairs. How many of these are inversions? 
 
@@ -77,11 +77,19 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.187.
 
-## Examples
-###   Running for 0.3nlog(n) steps
+## Visualizing permutations
+Below are a few visualizations of permutations generated using the process described in our card-shuffling example.
 
-n = 12:<br/>
+###   Running for 0.3nlog(n) steps
+First, let's look at a couple of permutations generated when the process is run for 0.3nlog(n) steps. This is not enough steps for the process to converge to a uniform distribution over all permutations, so we should expect the p values from our statistical tests to be pretty small here.
+
+Here is an example of a permutation with n = 12. The visualizations shown are:<br/>
+* A bipartite graph mapping the indices of the permutation (on the left) to the element at each index in the permutation (on the right).
+* A scatterplot mapping the indices to the element at each index.
+
 <img src="12Permutation0.3nlogn.png">
+
+Here is a table of the p values from our statistical tests:
 
 | Test                        | p value      |
 | --------------------------- | ------------ |
@@ -91,9 +99,11 @@ n = 12:<br/>
 | Kendall's tau               | 0.0548539399 |
 
 
-n = 50:<br/>
+Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
+
 <img src="50Permutation0.3nlogn.png">
 
+Note the p values from our statistical tests: 
 | Test                        | p value      |
 | --------------------------- | ------------ |
 | Footrule                    | 0.0510076617 |
@@ -101,5 +111,30 @@ n = 50:<br/>
 | Hamming distance            | 0.0005941848 |
 | Kendall's tau               | 0.1300158834 |
 
+
 ###   Running for 0.7nlog(n) steps
+Now let's look at a couple of examples when the process has been run for 0.7nlog(n) steps. 
+
+Here is an example where n = 12:
+
+<img src="12Permutation0.7nlogn.png">
+
+Note how much larger the p values are: 
+| Test                        | p value   |
+| --------------------------- | --------- |
+| Footrule                    | 0.9711963 |
+| Spearman's rank correlation | 0.7630246 |
+| Hamming distance            | 0.6321206 |
+| Kendall's tau               | 0.7838616 |
+
+And here is an example where n = 50:
+
+<img src="50Permutation0.7nlogn.png">
+
+| Test                        | p value   |
+| --------------------------- | --------- |
+| Footrule                    | 0.7399849 |
+| Spearman's rank correlation | 0.7188471 |
+| Hamming distance            | 1         |
+| Kendall's tau               | 0.7825171 |
 
