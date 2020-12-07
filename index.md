@@ -17,7 +17,7 @@ The obvious question here is, how many times do we need to repeat the process? I
 ## Is it really random?
 Our null hypothesis here is that the generated permutation is uniformly distributed.
 
-Each of the 4 tests below will produce a corredponding p-value. Setting a cut-off for the p-value is tricky and controvertial, so we can only make subjective decisions regarding when to reject the null hypothesis.
+Each of the 4 tests below will produce a corredponding p-value. Setting a cut-off for the p-value is tricky and controversial, so we can only make subjective decisions regarding when to reject the null hypothesis. However, we might not want to see about p-values less than 0.05.
 
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
