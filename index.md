@@ -21,7 +21,7 @@ Each of the 4 tests below will produce a corresponding p-value. Setting a cut-of
 
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
-###   Footrule
+###   Spearman's Footrule
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Footrule. Let ρ(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
 
 Spearman's Footrule has these properties:
@@ -142,4 +142,5 @@ And here is an example where n = 50:
 
 ## Additional resources
 [Read more](https://en.wikipedia.org/wiki/Permutation) about permutations on Wikipedia. <br/>
+See [Chapter 6](https://projecteuclid.org/euclid.lnms/1215467415) of _Group Representations in Probability and Statistics_ by Persi Diaconis for explanations of Spearman's footrule, Spearman's rank correlation, Hamming distance, and Kendall's tau. <br/>
 [View](https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/random-permutation.R) the R code to generate the permutations, run the statistical tests, and produce the bipartite and scatterplot graphs.
