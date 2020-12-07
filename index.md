@@ -15,8 +15,14 @@ But how do we actually generate the permutation? 52 isn't a very large number, b
 The obvious question here is, how many times do we need to repeat the process? If we just do one or two swaps, we'll end up with a permutation very close to our starting state - the order of the cards will barely change at all. It turns out that for a set of n elements, it takes about 0.6nlog(n) steps for this process to converge to a random permutation. So for our deck of cards, we'll want to run the program for around 0.6 * 52log(52) = 123 steps. 
 
 ## Is it really random?
+Our null hypothesis here is that the generated permutation is uniformly distributed.
+
+Each of the 4 tests below will produce a corredponding p-value. Setting a cut-off for the p-value is tricky and controvertial, so we can only make subjective decisions regarding when to reject the null hypothesis.
+
+[Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
+
 ###   Spearman's Footrule
-Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), where 1 ≤ i ≤ n.
+Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i). Let ρ(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
 
 Spearman's Footrule has these properties:
 
