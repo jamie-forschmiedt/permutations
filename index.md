@@ -109,16 +109,16 @@ Here is a table of the p values from our statistical tests:
 
 Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
 
-<img src="50Permutation0.3nlogn.png">
+<img src="50Permutation0.3nlogn_2.png">
 
 Note the p values from our statistical tests: 
 
-| Test                        | p value      |
-| --------------------------- | ------------ |
-| Footrule                    | 0.0510076617 |
-| Spearman's rank correlation | 0.1775827162 |
-| Hamming distance            | 0.0005941848 |
-| Kendall's tau               | 0.1300158834 |
+| Test                        | p value    |
+| --------------------------- | ---------- |
+| Footrule                    | 0.06123902 |
+| Spearman's rank correlation | 0.03043598 |
+| Hamming distance            | 0.63212056 |
+| Kendall's tau               | 0.01792059 |
 
 
 ###   Running for 0.7nlog(n) steps
