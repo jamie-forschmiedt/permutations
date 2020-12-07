@@ -126,16 +126,16 @@ Now let's look at a couple of examples when the process has been run for 0.7nlog
 
 Here is an example where n = 12:
 
-<img src="12Permutation0.7nlogn.png">
+<img src="12Permutation0.7nlogn_2.png">
 
 Note how much larger the p values are: 
 
 | Test                        | p value   |
 | --------------------------- | --------- |
-| Footrule                    | 0.9711963 |
-| Spearman's rank correlation | 0.7630246 |
-| Hamming distance            | 0.6321206 |
-| Kendall's tau               | 0.7838616 |
+| Footrule                    | 0.2950399 |
+| Spearman's rank correlation | 0.4303645 |
+| Hamming distance            | 1         |
+| Kendall's tau               | 0.2725711 |
 
 And here is an example where n = 50:
 
