@@ -139,16 +139,16 @@ Note how much larger the p values are:
 
 And here is an example where n = 50:
 
-<img src="50Permutation0.7nlogn.png">
+<img src="50Permutation0.7nlogn_2.png">
 
 Again, note the larger p values:
 
 | Test                        | p value   |
 | --------------------------- | --------- |
-| Footrule                    | 0.7399849 |
-| Spearman's rank correlation | 0.7188471 |
-| Hamming distance            | 1         |
-| Kendall's tau               | 0.7825171 |
+| Footrule                    | 0.6046519 |
+| Spearman's rank correlation | 0.6266931 |
+| Hamming distance            | 0.6321206 |
+| Kendall's tau               | 0.6575217 |
 
 We can see from our visualizations and p values that the random transposition process did not appear to mix when we ran it for 0.3nlog(n) steps, but it did when we ran it for 0.7nlog(n) steps.
 
