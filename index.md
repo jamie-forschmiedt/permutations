@@ -50,11 +50,9 @@ We are therefore able to calculate a p value for our test statistic. In our exam
 ###   Hamming distance
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
 
-n - H, the total number of fixed point in σ where π(i) = σ(i), has a limiting Poisson(1) distribution. 
+n - H, the total number of fixed points in σ where π(i) = σ(i), has a limiting Poisson(1) distribution. 
 
-We are therefore able to calculate a p value for our test statistic. In our example, H = 5, n - H = 1, λ = 1.
-
-Hence, we can calculate that the upper-tailed p-value, whic is P(n - H ≥ 1) = 1 - P(n - H < 1) = 1 - P(n - H = 0) = 1 - <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1^0e^{-1}}{0!}"> = 1 - 0.3678794 = 0.6321206
+In our example, H = 5, n - H = 1, λ = 1. We are therefore able to calculate a p value for our test statistic. The upper-tailed p-value is P(n - H ≥ 1) = 1 - P(n - H < 1) = 1 - P(n - H = 0) = 1 - <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1^0e^{-1}}{0!}"> = 1 - 0.3678794 = 0.6321206
 
 ###   Kendall's tau
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to π, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
