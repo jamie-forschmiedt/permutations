@@ -141,6 +141,8 @@ And here is an example where n = 50:
 
 <img src="50Permutation0.7nlogn.png">
 
+Again, note the larger p values:
+
 | Test                        | p value   |
 | --------------------------- | --------- |
 | Footrule                    | 0.7399849 |
@@ -148,7 +150,10 @@ And here is an example where n = 50:
 | Hamming distance            | 1         |
 | Kendall's tau               | 0.7825171 |
 
+We can see from our visualizations and p values that the random transposition process did not appear to mix when we ran it for 0.3nlog(n) steps, but it did when we ran it for 0.7nlog(n) steps.
+
 ## Additional resources
 [Read more](https://en.wikipedia.org/wiki/Permutation) about permutations on Wikipedia. <br/>
+See [this article](https://www.pnas.org/content/pnas/93/4/1659.full.pdf) in PNAS for an explanation of the mixing time of the random transposition process.
 See [Chapter 6](https://projecteuclid.org/euclid.lnms/1215467415) of _Group Representations in Probability and Statistics_ by Persi Diaconis for explanations of Spearman's footrule, Spearman's rank correlation, Hamming distance, and Kendall's tau. <br/>
 [View](https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/random-permutation.R) the R code to generate the permutations, run the statistical tests, and produce the bipartite and scatterplot graphs.
