@@ -24,7 +24,7 @@ Each of the 4 tests below will produce a corresponding p-value. Setting a cut-of
 ###   Spearman's Footrule
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Spearman's footrule. 
 
-Let D(π, σ) = Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
+<p> Let D(π, σ) = Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. </p>
 
 Footrule has these properties:
 
