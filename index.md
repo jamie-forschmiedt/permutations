@@ -17,14 +17,14 @@ The obvious question here is, how many times do we need to repeat the process? I
 ## Is it really random?
 Our null hypothesis here is that the generated permutation is uniformly distributed.
 
-Each of the 4 tests below will produce a corresponding p-value. Setting a cut-off for the p-value is tricky and controversial, so we can only make subjective decisions regarding when to reject the null hypothesis. However, we might not want to see p-values less than around 0.05.
+Each of the 4 tests below will produce a corresponding p-value. Setting a cut-off for the p-value is tricky and controversial, so we can only make subjective decisions regarding when to reject the null hypothesis. However, we might not want to see p-values less than 0.05.
 
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
 ###   Spearman's Footrule
 Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Footrule. Let ρ(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
 
-Spearman's Footrule has these properties:
+Footrule has these properties:
 
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1}{3}(n^2 - 1)">
 
@@ -32,12 +32,12 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{\rho - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, ρ = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.29558.
+We are therefore able to calculate a p-value for our test statistic. In our example, ρ = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.29558.
 
 ###   Spearman's rank correlation
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), which is called the Spearman's rank correlation. Let <img src="https://render.githubusercontent.com/render/math?math=S^2(\pi, \sigma)"> =Σ<img src="https://render.githubusercontent.com/render/math?math=(\pi(i) - \sigma(i))^2">, where 1 ≤ i ≤ n. 
 
-Spearman's rank has these properties:
+Spearman's rank correlation has these properties:
 
 Mean = <img src="https://render.githubusercontent.com/render/math?math=\dfrac{(n^3 - n)}{6}">
 
@@ -45,14 +45,14 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{S^2 - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, <img src="https://render.githubusercontent.com/render/math?math=S^{2}"> = 9 + 1 + 1 + 1 + 4 + 0 = 16, mean = 210/6 = 35, variance = 36(5)(49)/36 = 245, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 15.652. Our standardized variable is therefore -1.214. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.22479.
+We are therefore able to calculate a p-value for our test statistic. In our example, <img src="https://render.githubusercontent.com/render/math?math=S^{2}"> = 9 + 1 + 1 + 1 + 4 + 0 = 16, mean = 210/6 = 35, variance = 36(5)(49)/36 = 245, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 15.652. Our standardized variable is therefore -1.214. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.22479.
 
 ###   Hamming distance
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
 
 n - H, the total number of fixed points in σ where π(i) = σ(i), has a limiting Poisson(1) distribution. 
 
-In our example, H = 5, n - H = 1, λ = 1. We are therefore able to calculate a p value for our test statistic. The upper-tailed p-value is P(n - H ≥ 1) = 1 - P(n - H < 1) = 1 - P(n - H = 0) = 1 - <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1^0e^{-1}}{0!}"> = 1 - 0.3678794 = 0.6321206
+In our example, H = 5, n - H = 6 - 5 = 1, λ = 1. We are therefore able to calculate a p-value for our test statistic. The upper-tailed p-value is P(n - H ≥ 1) = 1 - P(n - H < 1) = 1 - P(n - H = 0) = 1 - <img src="https://render.githubusercontent.com/render/math?math=\dfrac{1^0e^{-1}}{0!}"> = 1 - 0.3678794 = 0.6321206
 
 ###   Kendall's tau
 Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The final test statistic we will compute is the number of inversions in σ compared to π, or the number of pairs (i, j) where i < j and the number in the ith position is greater than the number in the jth position in σ. 
@@ -77,7 +77,7 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 
 <img src="https://render.githubusercontent.com/render/math?math=\dfrac{I - Mean}{SD}"> has a standard normal limiting distribution.
 
-We are therefore able to calculate a p value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.187.
+We are therefore able to calculate a p-value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.187.
 
 ## Visualizing permutations
 Below are a few visualizations of permutations generated using the process described in our card-shuffling example.
