@@ -22,7 +22,9 @@ Each of the 4 tests below will produce a corresponding p-value. Setting a cut-of
 [Wikipedia](https://en.wikipedia.org/wiki/P-value) has lots of background information about the p-value.
 
 ###   Spearman's Footrule
-Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Spearman's footrule. Let D(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
+Consider the identity permutation π = (1, 2, 3, 4, 5, 6) and the permutation σ = (4, 1, 2, 5, 3, 6). The first test statistic we will compute is the sum of the absolute value of the difference between π(i) and σ(i), which is called the Spearman's footrule. 
+
+Let D(π, σ) =Σ|π(i) - σ(i)|, where 1 ≤ i ≤ n. 
 
 Footrule has these properties:
 
@@ -35,7 +37,9 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 We are therefore able to calculate a p-value for our test statistic. In our example, D = 3 + 1 + 1 + 1 + 2 + 0 = 8, mean = 35/3 = 11.667, variance = (6+1)(72+7)/45 = 12.289, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 3.506. Our standardized variable is therefore -1.046. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.29558.
 
 ###   Spearman's rank correlation
-Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), which is called the Spearman's rank correlation. Let <img src="https://render.githubusercontent.com/render/math?math=S^2(\pi, \sigma)"> =Σ<img src="https://render.githubusercontent.com/render/math?math=(\pi(i) - \sigma(i))^2">, where 1 ≤ i ≤ n. 
+Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The second test statistic we will compute is the sum of the square of the difference between π(i) and σ(i), which is called the Spearman's rank correlation. 
+
+Let <img src="https://render.githubusercontent.com/render/math?math=S^2(\pi, \sigma)"> =Σ<img src="https://render.githubusercontent.com/render/math?math=(\pi(i) - \sigma(i))^2">, where 1 ≤ i ≤ n. 
 
 Spearman's rank correlation has these properties:
 
@@ -48,7 +52,9 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 We are therefore able to calculate a p-value for our test statistic. In our example, <img src="https://render.githubusercontent.com/render/math?math=S^{2}"> = 9 + 1 + 1 + 1 + 4 + 0 = 16, mean = 210/6 = 35, variance = 36(5)(49)/36 = 245, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 15.652. Our standardized variable is therefore -1.214. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.22479.
 
 ###   Hamming distance
-Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
+Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. 
+
+Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
 
 n - H, the total number of fixed points in σ where π(i) = σ(i), has a limiting Poisson(1) distribution. 
 
