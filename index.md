@@ -154,6 +154,6 @@ We can see from our visualizations and p values that the random transposition pr
 
 ## Additional resources
 [Read more](https://en.wikipedia.org/wiki/Permutation) about permutations on Wikipedia. <br/>
-See [this article](https://www.pnas.org/content/pnas/93/4/1659.full.pdf) in PNAS for an explanation of the mixing time of the random transposition process. <br/>
+See the 1996 paper ["The cutoff phenomenon in finite Markov chains](https://www.pnas.org/content/pnas/93/4/1659.full.pdf) by Persi Diaconis in PNAS for an explanation of the mixing time of the random transposition process. <br/>
 See [Chapter 6](https://projecteuclid.org/euclid.lnms/1215467415) of _Group Representations in Probability and Statistics_ by Persi Diaconis for explanations of Spearman's footrule, Spearman's rank correlation, Hamming distance, and Kendall's tau. <br/>
 [View](https://github.com/jamie-forschmiedt/permutations/blob/gh-pages/random-permutation.R) the R code to generate the permutations, run the statistical tests, and produce the bipartite and scatterplot graphs.
