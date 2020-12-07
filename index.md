@@ -48,7 +48,8 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 We are therefore able to calculate a p value for our test statistic. In our example, <img src="https://render.githubusercontent.com/render/math?math=S^{2}"> = 9 + 1 + 1 + 1 + 4 + 0 = 16, mean = 210/6 = 35, variance = 36(5)(49)/36 = 245, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 15.652. Our standardized variable is therefore -1.214. Using a standard normal distribution Z table, we can calculate that the two-tailed p value is about 0.22479.
 
 ###   Hamming distance
-Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i:π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
+Again, π = (1, 2, 3, 4, 5, 6) and σ = (4, 1, 2, 5, 3, 6). The third test statistic we will compute is the number of positions whose numbers are diffrent from those in the identity premutation, which is call the Hamming distance. Let H(π, σ) = #{i: π(i) ≠ σ(i)} , where 1 ≤ i ≤ n. 
+
 The total number of fixed point in σ, where π(i) = σ(i), has a limiting Poisson(1) distribution.
 
 ###   Kendall's tau
