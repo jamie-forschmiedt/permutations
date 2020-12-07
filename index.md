@@ -95,16 +95,16 @@ Here is an example of a permutation with n = 12. The visualizations shown are:<b
 * A bipartite graph mapping the indices of the permutation (on the left) to the element at each index in the permutation (on the right).
 * A scatterplot mapping the indices to the element at each index.
 
-<img src="12Permutation0.3nlogn.png">
+<img src="12Permutation0.3nlogn_2.png">
 
 Here is a table of the p values from our statistical tests:
 
-| Test                        | p value      |
-| --------------------------- | ------------ |
-| Footrule                    | 0.0103574528 |
-| Spearman's rank correlation | 0.0861079997 |
-| Hamming distance            | 0.0005941848 |
-| Kendall's tau               | 0.0548539399 |
+| Test                        | p value    |
+| --------------------------- | ---------- |
+| Footrule                    | 0.03314137 |
+| Spearman's rank correlation | 0.07795419 |
+| Hamming distance            | 0.01898816 |
+| Kendall's tau               | 0.07460482 |
 
 
 Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
