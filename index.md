@@ -12,7 +12,7 @@ But how do we actually generate the permutation? 52 isn't a very large number, b
 4) If two different indices are picked, swap the numbers at those indices.<br/>
 5) Repeat steps 2-4 for some number of iterations.<br/>
 
-The obvious question here is, how many times do we need to repeat the process? If we just do one or two swaps, we'll end up with a permutation very close to our starting state - the order of the cards will barely change at all. It turns out that for a set of n elements, it takes close to 0.5nlog(n) steps for this process to converge to a random permutation with the accuracy increasing with increasing n. The exact bound is 0.5nlog(n) + Cn, where C is a constant depending on how much mixing is required (see [Diaconis 1996](https://www.pnas.org/content/pnas/93/4/1659.full.pdf)). 0.5nlog(n) + Cn = (0.5log(n) + C)n, which makes 0.6nlog(n) a good upper bound. So for our deck of cards, we'll want to run the program for around 0.6 * 52log(52) = 123 steps. 
+The obvious question here is, how many times do we need to repeat the process? If we just do one or two swaps, we'll end up with a permutation very close to our starting state - the order of the cards will barely change at all. It turns out that for a set of n elements, it takes close to 0.5nlog(n) steps for this process to converge to a random permutation with the accuracy increasing with increasing n. The exact bound is 0.5nlog(n) + Cn, where C is a constant depending on how much mixing is required. This phenonmenon is called the cut-off phenonmenon (see [Diaconis 1996](https://www.pnas.org/content/pnas/93/4/1659.full.pdf)). 0.5nlog(n) + Cn = (0.5log(n) + C)n, which makes 0.6nlog(n) a good upper bound. So for our deck of cards, we'll want to run the program for around 0.6 * 52log(52) = 123 steps. 
 
 ## Is it really random?
 Our null hypothesis here is that the generated permutation is uniformly distributed.
@@ -89,7 +89,7 @@ We are therefore able to calculate a p-value for our test statistic. In our exam
 Below are a few visualizations of permutations generated using the process described in our card-shuffling example.
 
 ###   Running for 0.3nlog(n) steps
-First, let's look at a couple of permutations generated when the process is run for 0.3nlog(n) steps. This is not enough steps for the process to converge to a uniform distribution over all permutations, so we should expect the p values from our statistical tests to be pretty small here.
+First, let's look at a couple of permutations generated when the process is run for 0.3nlog(n) steps. This is not enough steps for the process to converge to a uniform distribution over all permutations, so we should expect the p-values from our statistical tests to be pretty small here.
 
 Here is an example of a permutation with n = 12. The visualizations shown are:<br/>
 * A bipartite graph mapping the indices of the permutation (on the left) to the element at each index in the permutation (on the right).
@@ -97,28 +97,32 @@ Here is an example of a permutation with n = 12. The visualizations shown are:<b
 
 <img src="12Permutation0.3nlogn_2.png">
 
-Here is a table of the p values from our statistical tests:
+Here is a table of the p-values from our statistical tests:
 
-| Test                        | p value    |
+| Test                        | p-value    |
 | --------------------------- | ---------- |
 | Footrule                    | 0.03314137 |
 | Spearman's rank correlation | 0.07795419 |
 | Hamming distance            | 0.01898816 |
 | Kendall's tau               | 0.07460482 |
 
+In this example, not all the p-values are greater than 0.05, so we reject the null hypothesis. (The reason why we use 0.05 here as the cut-off is wholly subjective. Again, p-values for multiple hypothesis testing is tricky so you should make your own subjective decisions.)
+
 
 Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
 
 <img src="50Permutation0.3nlogn_2.png" width="75%">
 
-Note the p values from our statistical tests: 
+Note the p-values from our statistical tests: 
 
-| Test                        | p value    |
+| Test                        | p-value    |
 | --------------------------- | ---------- |
 | Footrule                    | 0.06123902 |
 | Spearman's rank correlation | 0.03043598 |
 | Hamming distance            | 0.63212056 |
 | Kendall's tau               | 0.01792059 |
+
+In this example, not all the p-values are greater than 0.05, so we reject the null hypothesis.
 
 
 ###   Running for 0.7nlog(n) steps
@@ -128,29 +132,33 @@ Here is an example where n = 12:
 
 <img src="12Permutation0.7nlogn_2.png">
 
-Note how much larger the p values are: 
+Note how much larger the p-values are: 
 
-| Test                        | p value   |
+| Test                        | p-value   |
 | --------------------------- | --------- |
 | Footrule                    | 0.2950399 |
 | Spearman's rank correlation | 0.4303645 |
 | Hamming distance            | 1         |
 | Kendall's tau               | 0.2725711 |
 
+In this example, all the p-values are above 0.05, so we fail to reject the null hypothesis.
+
 And here is an example where n = 50:
 
 <img src="50Permutation0.7nlogn_2.png" width="75%">
 
-Again, note the larger p values:
+Again, note the larger p-values:
 
-| Test                        | p value   |
+| Test                        | p-value   |
 | --------------------------- | --------- |
 | Footrule                    | 0.6046519 |
 | Spearman's rank correlation | 0.6266931 |
 | Hamming distance            | 0.6321206 |
 | Kendall's tau               | 0.6575217 |
 
-We can see from our visualizations and p values that the random transposition process did not appear to mix when we ran it for 0.3nlog(n) steps, but it did when we ran it for 0.7nlog(n) steps.
+In this example, all the p-values are above 0.05, so we fail to reject the null hypothesis.
+
+We can see from our visualizations and p-values that the random transposition process did not appear to mix when we ran it for 0.3nlog(n) steps, but it did when we ran it for 0.7nlog(n) steps.
 
 ## Additional resources
 [Read more](https://en.wikipedia.org/wiki/Permutation) about permutations on Wikipedia. <br/>
