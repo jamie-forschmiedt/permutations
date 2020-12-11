@@ -90,7 +90,7 @@ Variance = <img src="https://render.githubusercontent.com/render/math?math=\dfra
 We are therefore able to calculate a p-value for our test statistic. In our example, I = 4, mean = 15/2 = 7.5, variance = 6(6-1)(12+5)/72 = 7.083, and SD = <img src="https://render.githubusercontent.com/render/math?math=\sqrt{Variance}"> = 2.66. Our standardized variable is therefore -1.32. Using a standard normal distribution Z table, we can calculate that the two-tailed p-value is about 0.187.
 
 ## Visualizing permutations
-Below are a few visualizations of permutations generated using the process described in our card-shuffling example.
+Below are a few visualizations of permutations generated using the random transposition process described in our card-shuffling example.
 
 ###   Running for 0.3nlog(n) steps
 First, let's look at a couple of permutations generated when the process is run for 0.3nlog(n) steps. This is not enough steps for the process to converge to a uniform distribution over all permutations, so we should expect the p-values from our statistical tests to be pretty small here.
@@ -99,7 +99,7 @@ Here is an example of a permutation with n = 12. The visualizations shown are:<b
 * A bipartite graph mapping the indices of the permutation (on the left) to the element at each index in the permutation (on the right).
 * A scatterplot mapping the indices to the element at each index.
 
-<img src="12Permutation0.3nlogn_2_demo.png">
+<img src="12Permutation0.3nlogn_2.png">
 
 Here is a table of the p-values from our statistical tests:
 
