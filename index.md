@@ -99,7 +99,7 @@ Here is an example of a permutation with n = 12. The visualizations shown are:<b
 * A bipartite graph mapping the indices of the permutation (on the left) to the element at each index in the permutation (on the right).
 * A scatterplot mapping the indices to the element at each index.
 
-<img src="12Permutation0.3nlogn_2_demo.png">
+<img src="12Permutation0.3nlogn_2.png">
 
 Here is a table of the p-values from our statistical tests:
 
