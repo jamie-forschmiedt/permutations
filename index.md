@@ -115,7 +115,7 @@ In this example, not all the p-values are greater than 0.05, so we reject the nu
 
 Here is an example of a permutation with n = 50. (The bipartite graph gets visually chaotic with larger values of n, so only the scatterplot is shown here.)
 
-<img src="50Permutation0.3nlogn_2.png" width="75%">
+<img src="50Permutation0.3nlogn_2_demo.png" width="75%">
 
 Note the p-values from our statistical tests: 
 
